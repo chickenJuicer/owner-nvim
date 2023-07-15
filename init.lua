@@ -1,0 +1,8 @@
+vim.loader.enable()
+--require('profile')
+--require('packinit')
+--require('keymap')
+-- require('init-packer')
+-- require('init-lsp')
+require('initKeymap')
+require('initLazy')
