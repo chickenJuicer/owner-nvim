@@ -21,8 +21,14 @@ return {
     config=true
   },
   {
+    'RRethy/vim-illuminate',
+    config=function ()
+      require('illuminate').configure()
+    end
+  },
+  {
     'lewis6991/gitsigns.nvim',
     config=true
-  }
+  },
 
 }
