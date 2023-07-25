@@ -34,23 +34,15 @@ local keyset = vim.keymap.set
 
 keyset('v','J',":m '>+1<CR>gv=gv")
 keyset('v','K',":m '<-2<CR>gv=gv")
-keyset('n','J',":m+1<CR>")
-keyset('n','K',":m-2<CR>")
+-- keyset('n','J',":m+1<CR>")
+-- keyset('n','K',":m-2<CR>")
 
 keyset('n','<LEADER>1', ":NvimTreeToggle<CR>",{noremap = true,silent=true})
 
 
 keyset('n','<LEADER>o','o<ESC>',{noremap=true})
 keyset('n','<LEADER>O','O<ESC>',{noremap=true})
-keyset('n','<LEADER>fm','gg=G<C-O>zz',{noremap=true,silent=true})
 
 keyset('n','<C-h>',':BufferLineCyclePrev<CR>',{noremap=true,silent=true})
 keyset('n','<C-l>',':BufferLineCycleNext<CR>',{noremap=true,silent=true})
-keyset('n','<C-j>','<C-d>',{noremap=true})
-keyset('n','<C-k>','<C-u>',{noremap=true})
 keyset('n','<LEADER><CR>',':set nohlsearch<CR>',{noremap=true,silent=true})
-
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
-keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
-keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
-keyset("i", "<C-s>", "coc#refresh()", {silent = true, expr = true})
